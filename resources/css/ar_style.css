@@ -1,0 +1,3148 @@
+body { direction: rtl ; }
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    direction: rtl;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /* height: 50000px; */
+    padding-bottom: 50px;
+    scroll-behavior: smooth;
+}
+::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* .container {} */
+
+nav {
+    border-bottom: 1px solid #eee;
+    padding:10px 0;
+    scroll-behavior: smooth;
+    /* transition: 0.1s; */
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+nav .left-side .classroom-name {
+    color: #666;
+    font-size: 15px;
+    transition: 0.1s;
+}
+nav .left-side .classroom-name small{
+    display: block;
+    font-size: 12px;
+    margin-top: 3px;
+}
+nav .right-side .classroom-name:hover {
+    text-decoration: underline;
+}
+nav .meddle ul{
+    display: flex;
+}
+nav .meddle ul li a{
+    color: #5f6368;
+    padding:23px 25px;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.3s;
+    /* border-bottom: 5px solid transparent; */
+}
+nav .meddle ul li a:hover{
+    /* border-bottom: 5px solid #5a5e6300; */
+    background-color: #5a5e6309;
+}
+nav .meddle ul li a.active {
+    padding:20px 25px;
+    color: var(--main-color);
+    border-bottom: 5px solid var(--main-color);
+}
+nav .meddle ul li a.active:hover {
+    background-color: var(--main-background-color);
+}
+span.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s;
+    border-radius:50%;
+    cursor: pointer;
+    position: relative;
+}
+
+span.background:hover {
+    background-color: #a5a5a529;
+}
+
+nav .google {
+    display: flex;
+    font-weight: 500;
+    font-size: 22px;
+    cursor: default;
+    user-select: none;
+}
+
+nav strong {
+    color: #5f6368;
+    font-weight: 400;
+    /* font-size: 18px; */
+}
+
+nav .rigth-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+nav svg {
+    width: 30px;
+    fill: #666;
+
+}
+
+nav img {
+    width: 35px;
+    border-radius:50%;
+}
+
+.header {
+    padding:25px 0px;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.header ul li a {
+    display: flex;
+    align-items: center;
+    /* width: 125px; */
+    color: #277be9;
+    fill: #277be9;
+    font-weight: 500;
+    transition: 0.3s;
+    padding:7px 15px;
+    column-gap: 5px;
+    border-radius:5px;
+}
+
+.header ul li a:hover {
+    background-color: #0000ff26;
+    color: #0000ffe8;
+    fill: #0000ffe8;
+
+}
+.nav-scroll {
+    box-shadow: 1px 1px 12px #2222222e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fff;
+}
+
+nav .class-type {
+    position: absolute;
+    top: 40px;
+    background: #fff;
+    right: -85px;
+    padding:7px 0px;
+    border-radius:5px;
+    box-shadow: 0 0 8px #2222223d;
+    width: fit-content;
+    z-index: 5;
+}
+
+nav .class-type ul li {
+    padding:15px 20px;
+    font-weight: 500;
+    list-style: none;
+    transition: 0.3s;
+    margin:0;
+    text-wrap: nowrap;
+    /* width: 250px; */
+}
+
+nav .class-type ul li:hover {
+    background: #66666611;
+}
+
+nav .class-type ul li a {
+    transition: 0.3s;
+    color: #666;
+}
+
+nav .class-type ul li:hover a {
+    color: #333;
+}
+
+nav .hidden {
+    display: none;
+}
+
+.cards {
+    margin-top: 60px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+}
+
+.card {
+    /* width: 250px; */
+    /* overflow: hidden; */
+    border-radius:8px;
+    height: 300px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 0 20px #33333331 ;
+}
+.card .img {
+    position: relative;
+}
+
+.card .img>img {
+    width: 100%;
+    height: 130px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    user-select: none;
+}
+
+.card .img .title {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 100%;
+    color: #fff;
+}
+
+.card .img .title h3 {
+    font-size: 25px;
+}
+
+.card .img .title h3:hover {
+    text-decoration: underline;
+}
+
+.card .img .title h3 span {
+    font-size: 18px;
+    display: block;
+    margin-top: 5px;
+}
+
+.card .img .title .name {
+    margin-top: 5px;
+}
+.card .img .title .name:hover {
+    text-decoration: underline;
+}
+.card .img .title .avatar {
+    position: absolute;
+    top: 65px;
+    left: 45px;
+}
+
+.card .img .title .avatar img {
+    width: 75px;
+    border-radius:50%;
+}
+
+.card .img .title .option {
+    fill: #fff;
+    position: absolute;
+    top: -3px;
+    left: 30px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border-radius:50%;
+}
+
+.card .img .title .option:hover {
+    background: #3333334a;
+}
+.card .card-body {
+    height: 110px; 
+    cursor: pointer;
+    /* background:red; */
+}
+
+.card .img .title .option ul.options{
+    position: absolute;
+    top: 50px;
+    background: #fff;
+    padding-top: 10px;
+    right: -8px;
+    padding-bottom: 10px;
+    z-index: 20;
+    box-shadow: 1px 1px 15px #2222222a;
+    border-radius:5px;
+    transition: 0.2s;
+}
+
+.card .img .title .option ul.options li a {
+    display: inline-block;
+    padding:10px 12px;
+    width: 100%;
+    color: #222;
+    font-size: 18px;
+    text-wrap:nowrap;
+}
+.card .img .title .option ul.options-hidden {
+    height: 0;
+    padding:0;
+    overflow: hidden;
+    /* display: none; */
+}
+.card .img .title .option ul.options li a:hover {
+    background: #66666613;
+
+}
+.card .card-footer {
+    position: relative;
+    /* top: 110px; */
+    padding:3px 12px;
+    width: 100%;
+    border-top: solid 1px #eee;
+}
+
+.card .card-footer span {
+    float: left;
+}
+
+.card .card-footer span a {
+    width: 45px;
+    height: 45px;
+    /* display: inline-block; */
+    border-radius:50%;
+    /* background: #dddddd48; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    fill: #333;
+}
+
+.card .card-footer span a:hover {
+    background: #dddddd48;
+    fill: black;
+}
+
+.create-classroom {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%, -50%);
+    transform-origin: center;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.create-classroom .overlay,
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004d;
+}
+
+.create-classroom form {
+    /* z-index: 10; */
+    position: absolute;
+    transform: translate(+50%, -50%);
+    top: 50%;
+    right: 50%;
+    background: #fff;
+    border-radius:8px;
+    width: 50%;
+    padding:28px 22px;
+}
+
+.create-classroom form h4 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 12px;
+    margin-right: 5px;
+}
+
+.create-classroom form .form-control,
+form.create .form-control {
+    position: relative;
+    padding:8px 0;
+}
+
+.create-classroom form .form-control input,
+form.create .form-control input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #444;
+    width: 100%;
+    height: 60px;
+    background: #eee;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-right: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #0021ffcf;
+    /* color: var(--main-color); */
+    
+    transition: 0.08s;
+}
+form.create .form-control input {
+    color: var(--main-color);
+}
+
+.create-classroom form .form-control label,
+form.create .form-control input + label{
+    position: absolute;
+    top: 25px;
+    font-size: 20px;
+    right: 15px;
+    transition: 0.3s;
+    color: #666;
+    user-select: none;
+}
+
+.create-classroom form .form-control input:focus,
+form.create .form-control input:focus{
+    border-bottom: 3px solid #0021ffcf;
+}
+
+.create-classroom form .form-control input:focus,
+.create-classroom form .form-control input.active,
+form.create .form-control input.active{
+    border-bottom: 3px solid #0021ffcf;
+}
+form.create .form-control input:focus,
+form.create .form-control input.active{
+    border-color: var(--main-color);
+}
+
+.create-classroom form .form-control input:focus+label,
+.create-classroom form .form-control label.active,
+form.create .form-control input:focus+label,
+form.create .form-control input + label.active {
+    top: 15px;
+    font-weight: 500;
+    font-size: 13px;
+    /* right: 15px; */
+    color: #0021ffcf;
+}
+form.create .form-control input:focus+label,
+form.create .form-control input + label.active {
+    color: var(--main-color);
+}
+.create-classroom form .form-control small {
+    color: red;
+}
+
+.create-classroom.cancle-create-class {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.create-classroom form .buttons,
+form.create .buttons{
+    padding-top: 10px;
+    text-align: left;
+}
+
+.create-classroom form .buttons button,
+form.create .buttons button,
+form.create .buttons button#add-classwork-link {
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding:8px 10px;
+    border-radius:3px;
+    transition: 0.3s;
+    cursor: pointer;
+    background: transparent;
+}
+
+.create-classroom form .buttons button[type='button'],
+form.create .buttons button[type='button'] {
+    color: #333333de;
+}
+
+.create-classroom form .buttons button[type='button']:hover,
+form.create .buttons button[type='button']:hover{
+    color: #333;
+    background: #6666661c;
+}
+
+.create-classroom form .buttons button[type='submit'],
+form.create .buttons button[type='submit'],
+form.create .buttons button#add-classwork-link{
+    color: #3333333b;
+    cursor: default;
+    pointer-events: none;
+}
+
+.create-classroom form .buttons button[type='submit'].active,
+form.create .buttons button[type='submit'].active,
+form.create .buttons button#add-classwork-link.active
+    {
+    color: #1111dbd1;
+    pointer-events: auto;
+    cursor: pointer;
+    /* background: #2f2fc92e; */
+    
+}
+form.create .buttons button[type='submit'].active,
+form.create .buttons button#add-classwork-link.active{
+    color: var(--main-color);
+}
+
+.create-classroom form .buttons button[type='submit']:hover,
+form.create .buttons button[type='submit']:hover{
+    color: #1111dbd1;
+    background: #2f2fc92e;
+}
+form.create .buttons button[type='submit']:hover,
+form.create .buttons button#add-classwork-link:hover{
+    color: var(--main-color);
+    background-color: var(--main-background-color);
+}
+
+aside {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* align-content:  */
+    width: 100%;
+    right: 0;
+    transition: 0.2s;
+}
+
+aside .content {
+    /* position: absolute; */
+    background: #fff;
+    height: 100%;
+    width: 25%;
+    box-shadow: 0 0 16px #22222269;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+aside .other-side {
+    flex: 1;
+}
+
+aside ul.general {
+    /* padding-top: 32px; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+aside ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3e424599;
+    column-gap: 50px;
+    padding:21px 0;
+    fill: #3e424599;
+    transition: 0.3s;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    /* padding-top: 15px; padding-left: 0px; padding-bottom: 15px; padding-right: 30px; */
+    padding-right: 25px;
+
+}
+aside ::-webkit-scrollbar {
+    width: 8px;
+}
+aside ::-webkit-scrollbar-track {
+    /* background-color: transparent; */
+}
+aside ::-webkit-scrollbar-thumb {
+    background: #8888883b;
+    height: 5px;
+    border-radius:50px;
+    /* transition: 0.2s; */
+}
+aside ::-webkit-scrollbar-thumb:hover {
+    background: #888888de;
+}
+aside ul h5 {
+    padding-right: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #222222c4;
+    padding-top: 20px; padding-left: 0px; padding-bottom: 15px; padding-right: 17px;
+}
+aside ul li a.active {
+    background-color: #e3eefc;
+    color: #277be9;
+    border: 1px #277be9 solid;
+    fill: #277be9;
+    pointer-events: none;
+}
+
+aside ul li a svg {
+    /* width: 50px; */
+}
+
+aside ul li a:hover {
+    background: #3f51b51a;
+    color: #3e4245;
+    fill: #3e4245;
+}
+
+aside ul li a>span {
+    background-color: #277be9;
+    width: 28px;
+    text-align: center;
+    border-radius:50%;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 17px;
+}
+
+aside.desable {
+    width: 0px;
+}
+
+
+.classroom-details {
+    width: 72%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.classroom-details .classroom-image {
+    margin-top: 15px;
+    border-radius:7px;
+    /* box-shadow: 0 0 15px #2222221a; */
+    overflow: hidden;
+    /* padding-top: 15px; */
+    position: relative;
+}
+.classroom-details .classroom-image img {
+    width: 100%;
+    height: 250px;
+    user-select: none;
+    border-radius:7px;
+}
+.classroom-details .classroom-image img.remove-readius {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.classroom-details .classroom-image .classroom-name {
+    position: absolute;
+    bottom: 30px;
+    right: 28px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 35px;
+}
+.classroom-details .classroom-image .classroom-name .classroom-section{
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+.classroom-details .classroom-image .customise {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    fill: var(--main-color);
+    color: var(--main-color);
+    background: #fff;
+    padding:8px 12px;
+    column-gap: 7px;
+    cursor: pointer;
+    border-radius:5px;
+}
+.classroom-details .classroom-image .customise::after {
+    content: '';
+    position: absolute;
+    border-radius:5px;
+    top: 50%;
+    right: 50%;
+    width: 0;
+    height: 100%;
+    transform: translate(+50%,-50%);
+    transform-origin: center;
+    transition: 0.3s;
+}
+.classroom-details .classroom-image .customise:hover::after {
+    width: 100%;
+    background: var(--main-color);
+    opacity: 0.1;
+    /* background: rgba(33, 149, 243, 0.185); */
+}
+.classroom-details .classroom-image .information-for-classroom i{
+    color: #ffffffd0;
+    position: absolute;
+    bottom: 25px;
+    left: 18px;
+    border: 2px solid;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.classroom-details .classroom-image .information-for-classroom i.fa-circle-info{
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+.classroom-details .classroom-image .information-for-classroom i.click{
+    display: none;
+}
+.classroom-details .classroom-image .information-for-classroom i:hover {
+    color: #fff;
+}
+.classroom-details .general-information{
+    background: #fff;
+    /* box-shadow: 0 0 15px #2222221a; */
+    padding:0px 30px 15px;
+    color: gray;
+    fill: gray;
+    transition: 0.3s;
+    height: 110px;
+    /* margin:0; */
+    overflow: hidden;
+}
+
+.classroom-details .classroom-image.shadow {
+    box-shadow: 0 0 15px #2222221a;
+}
+.classroom-details .general-information.display {
+    height: 0px;
+    padding-bottom: 0;
+}
+.classroom-details .general-information div {
+    padding:5px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.classroom-details .general-information div.code {
+    margin-bottom: -9px;
+}
+.classroom-details .general-information div span {
+    font-weight: 500;
+    margin-left: 5px;
+    font-weight: 600;
+}
+.classroom-details .general-information div .svg {
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.classroom-details .general-information div .svg:hover{
+    background: #8080800d;
+}
+section.customise-apperance {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%, -50%);
+    transform-origin: center;
+    width: 100%;
+    transition: 0.1s;
+    height: 100%;
+}
+section.customise-apperance.hidden {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+section.customise-apperance .overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* padding:15px; */
+    background: #00000042;
+}
+section.customise-apperance .conatiner-content {
+    position: absolute;
+    background: #fff;
+    width: 55%;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    padding:15px;
+    top: 50%;
+    border-radius:5px;
+    right: 50%;
+    transform: translate(+50%,-50%);
+}
+section.customise-apperance .conatiner-content .header {
+    padding:10px 0px 15px;
+    color: #333333c4;
+    font-size: 21px;
+}
+section.customise-apperance .img img {
+    width: 100%;
+}
+section.customise-apperance .img img {
+    width: 100%;
+    height: 180px;
+    border-radius:6px;
+}
+section.customise-apperance form {
+    padding-top: 30px;
+}
+section.customise-apperance form .select-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.customise-apperance form .select-img p {
+    font-weight: bold;
+    color: gray;
+    font-size: 18px;
+}
+section.customise-apperance form .select-img div {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+section.customise-apperance form .select-photo,
+section.customise-apperance form .upload-photo {
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-weight: 500;
+    column-gap: 5px;
+    fill: gray;
+    cursor: pointer;
+    border-radius:5px;
+    padding:8px 10px;
+    transition: 0.3s;
+    user-select: none;
+    background: #6666660d;
+    color: #666;
+    fill: #666;
+}
+section.customise-apperance form .select-photo:hover,
+section.customise-apperance form .upload-photo:hover {
+    background: var(--main-background-color);
+    color: var(--main-color);
+    fill: var(--main-color);
+}
+
+section.customise-apperance form .theme-title {
+    position: relative;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    top: 20px;
+}
+section.customise-apperance form .select-theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:35px 0px 30px;
+}
+section.customise-apperance form .select-theme .form-control label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    fill: transparent;
+    height: 55px;
+    cursor: pointer;
+    border-radius:50%;
+}
+section.customise-apperance form .select-theme .form-control input:checked + label {
+    fill: #fff;
+}
+section.customise-apperance form .buttons {
+    float: left;
+    padding-bottom: 6px;
+}
+section.customise-apperance form .buttons button{
+    font-size: 14px;
+    border: none;
+    padding:5px 8px;
+    border-radius:5px;
+    background: transparent;
+    color: #666;
+    transition: 0.3s;
+    cursor: pointer;
+}
+section.customise-apperance form .buttons button[type='submit']:hover{
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
+}
+section.customise-apperance form .buttons button[type='button']:hover{
+    background: #3333330d;
+}
+.classroom-details .classroom-content {
+    display: flex;
+    column-gap: 25px;
+    margin-top: 20px;
+    position: relative;
+}
+.classroom-details .classroom-content .left-side .code {
+    border: 1px solid #6666663b;
+    padding:8px;
+    width: 180px;
+    border-radius:5px;
+}
+.classroom-details .classroom-content .left-side .code div {
+    color: #444;
+    display: flex;
+    /* column-gap: 25px; */
+    align-items: center;
+    font-size: 17px;
+    fill: #444;
+    justify-content: space-between;
+}
+.classroom-details .classroom-content .left-side .code div.code-value {
+    justify-content: flex-start;
+    column-gap: 25px;
+    font-weight: 600;
+    fill: var(--main-color);
+    color: var(--main-color);
+}
+.classroom-details .classroom-content .left-side .code ul {
+    position: absolute;
+    background: #fff;
+    border-radius:5px;
+    box-shadow: 0 0 15px #33334445;
+    padding:8px 0px;
+    top: 50px;
+    z-index: 20;
+    /* width: fit-content; */
+    right: 120px;
+    transition: 0.3s;
+    /* transform: translate(+10%,0%); */
+}
+.classroom-details .classroom-content .left-side .code ul li {
+    margin:0;
+}
+.classroom-details .classroom-content .left-side .code ul.hidden {
+    width: 0;
+    /* height: 0; */
+    overflow: hidden;
+}
+.classroom-details .classroom-content .left-side .code ul a {
+    display: flex;
+    align-items: center;
+    padding:6px;
+    column-gap: 7px;
+    color: #333;
+    fill: #333;
+    transition: 0.3s;
+}
+.classroom-details .classroom-content .left-side .code ul a span {
+    padding-left: 15px;
+}
+.classroom-details .classroom-content .right-side .code ul a:hover{
+    background: #66666629;
+    color: #222;
+    fill: #222;
+}
+.classroom-details .classroom-content .left-side svg {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    padding:10px;
+    border-radius:50%;
+    margin-left: 8px;
+}
+.classroom-details .classroom-content .right-side svg:hover {
+    background: #dddddda3;
+}
+.classroom-details .classroom-content .right-side .code div.code-value svg:hover{
+    background-color: var(--main-background-color);
+}
+
+.classroom-details .classroom-content .left-side .upcoming{
+    border: 1px solid #6666663b;
+    padding:8px;
+    width: 180px;
+    border-radius:5px;
+    margin-top: 20px;
+}
+.classroom-details .classroom-content .left-side .upcoming h6{
+    font-size: 16px;
+    margin-bottom: 8px;
+    padding-top: 5px;
+    color: #666;
+}
+.classroom-details .classroom-content .left-side .upcoming span{
+    display: block;
+    padding-top: 10px;
+    padding-left: 18px;
+    font-size: 17px;
+    color: #808080c4;
+    margin-bottom: 5px;
+}
+.classroom-details .classroom-content .left-side .upcoming a{
+    margin-right: auto;
+    width: fit-content;
+    display: block;
+    font-size: 14px;
+    padding:9px;
+    transition: 0.3s;
+    border-radius:5px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.classroom-details .classroom-content .right-side .upcoming a:hover{
+    background-color: var(--main-background-color);
+}
+
+.classroom-details .classroom-content .right-side{
+    flex: 1;
+}
+.classroom-details .classroom-content .right-side .announce {
+    display: flex;
+    box-shadow: 0 0 10px #22222214;
+    padding:8px 20px;
+    position: relative;
+    border-radius:8px;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* pointer-events: none; */
+}
+.classroom-details .classroom-content .right-side .announce span{
+    font-size: 14px;
+    cursor: pointer;
+    color: #667;
+    display: inline-block;
+    margin-right: 20px;
+    flex: 1;
+    transition: 0.3s;
+}
+.classroom-details .classroom-content .left-side .announce:hover span{
+    color: var(--main-color);
+}
+.classroom-details .classroom-content .right-side .announce img {
+    border-radius:50%;
+    width: 40px;
+    cursor: pointer;
+}
+.classroom-details .classroom-content .right-side .announce svg {
+    /* flex: 1; */
+    fill: #6666;
+    padding:10px;
+    width: 45px;
+    cursor: pointer;
+    position: absolute;
+    height: 45px;
+    border-radius:50%;
+    left: 15px;
+    transition: 0.3s;
+}
+.classroom-details .classroom-content .left-side .announce svg:hover {
+    background: #dddddd5e;
+fill: #666;
+}
+
+.classroom-details .classroom-content .right-side .no-content {
+    border: 1px solid #6666663b;
+    padding:30px 8px;
+    border-radius:5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.classroom-details .classroom-content .right-side .no-content svg {
+    width: 50%;
+}
+.classroom-details .classroom-content .right-side .no-content svg .VnOHwf-Wvd9Cc{
+    fill: var(--main-color);
+}
+
+.classroom-details .classroom-content .right-side .no-content h3{
+    font-weight: normal;
+    color: var(--main-color);
+    font-size: 20px;
+    line-height: 1.6;
+}
+.classroom-details .classroom-content .right-side .no-content p{
+    color: #666666a8;
+    padding:10px 0px;
+    line-height: 1.6;
+}
+.classroom-details .classroom-content .right-side .no-content a {
+    display: flex;
+    justify-content: flex-end;
+    padding:13px 10px;
+    width: fit-content;
+    margin-right: auto;
+    border-radius:5px;
+    transition: 0.3s;
+    margin-top: 15px;
+    color: var(--main-color);
+    fill: var(--main-color);
+    border: 1px solid var(--main-background-color);
+    column-gap: 10px;
+    text-wrap:nowrap;
+}
+.classroom-details .classroom-content .left-side .no-content a:hover{
+    background: var(--main-background-color);
+}
+.classroom-details .code-details {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transition: 0.1s;
+    transform: translate(+50%,-50%);
+    z-index: 100;
+}
+.classroom-details .code-details .overlay {
+    background: #00000083;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.classroom-details .code-details .content {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%,-50%);
+    background: #fff;
+    padding:20px;
+    border-radius:7px;
+    color: var(--main-color);
+    fill: var(--main-color);
+}
+.classroom-details .code-details .content .colse {
+    margin-right: auto;
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    fill: #33333391;
+    transition: 0.2s;
+}
+.classroom-details .code-details .content .colse:hover {
+    background: #6666662b;
+    color: #333333c2;
+}
+.classroom-details .code-details .content .code {
+    padding:0px 40px;
+    padding-bottom: 20px;
+    font-size: 150px;
+    border-bottom: solid 3px;
+}
+.classroom-details .code-details .content .details {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+}
+.classroom-details .code-details .content .details .class-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.classroom-details .code-details .content .details .class-section {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    flex: 1;
+}
+.classroom-details .code-details .content .details .icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 15px;
+    margin-left: 13px;
+    padding:10px;
+    border-radius:4px;
+    transition: 0.3s;
+    margin-left: 50px;
+}
+.classroom-details .code-details .content .details .icon:hover {
+    background: var(--main-background-color);
+}
+.classroom-details .code-details .content .details > .svg {
+    position: absolute;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    /* display: flex; */
+}
+.classroom-details .code-details .content .details > .svg svg {
+    transition: 0.3s;
+    padding:6px;
+    border-radius:50%;
+    /* display: none; */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.classroom-details .code-details .content .details > .svg svg.hidden {
+    width: 0;
+    height: 0;
+    padding:0;
+}
+.classroom-details .code-details .content .details > .svg svg:hover {
+    background: var(--main-background-color);
+}
+.classroom-details .code-details .content.active {
+    width: 100%;
+    height: 100%;
+}
+.classroom-details .code-details .content.active .colse {
+    width: 50px;
+    margin-top: 15px;
+    margin-left: 12px;
+    height: 50px;
+}
+.classroom-details .code-details .content.active .code{
+    font-size: 250px;
+    padding-bottom: 33px;
+    text-align: center;
+    padding-top: 60px;
+}
+.classroom-details .code-details .content.active .details {
+    padding:50px 0;
+    font-size: 16px;
+}
+.classroom-details .code-details .content.active .details .class-name {
+    font-size: 25px;
+}
+.classroom-details .code-details .content.active .details .class-section {
+    font-size: 25px;
+}
+.classroom-details .code-details.hidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.classroom-details .code-details .content.active .details .icon {
+    font-size: 24px;
+    padding:20px 12px;
+}
+.classroom-details .code-details .content.active .details .icon>svg {
+    width: 26px;
+    height: 28px;
+}
+.classroom-details .code-details .content.active .details > svg {
+    width: 50px;
+    height: 50px;
+}
+.classroom-details .classroom-content .right-side .content-values {
+    margin-top: 30px;
+}
+.classroom-details .classroom-content .right-side .content-values .card{
+    box-shadow: none;
+    cursor: pointer;
+    position: relative;
+    height: fit-content;
+    transition: 0.3s;
+    border-color: var(--main-color);
+    padding:12px 15px 0px;
+    margin-top: 20px;
+}
+.classroom-details .classroom-content .left-side .content-values .card:hover{
+    background: var(--main-background-color);
+    border-color: var(--main-background-color);
+}
+.classroom-details .classroom-content .right-side .content-values .card > div{
+    display: flex;
+    color: #333333b0;
+    /* font-size: 22px; */
+    align-items: center;
+    fill: #fff;
+}
+.classroom-details .classroom-content .right-side .content-values .card span.svg {
+    width: 35px;
+    height: 35px;
+    background: var(--main-color);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    align-items: center;
+}
+.classroom-details .classroom-content .right-side .content-values .card span.svg  svg {
+    width: 23px;
+}
+.classroom-details .classroom-content .right-side .content-values .card h3 {
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    top: -5px;
+}
+.classroom-details .classroom-content .right-side .content-values .card .date {
+    position: relative;
+    right: 56px;
+    font-size: 14px;
+    top: -10px;
+}
+.classroom-details .classroom-content .right-side .content-values .card .icon {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    fill: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    transition: 0.3s;
+}
+.classroom-details .classroom-content .left-side .content-values .card .icon:hover {
+    background: #99999924;
+    fill: #666;
+}
+.classroom-details .classroom-content .right-side .content-values .card ul.card-settings{
+    position: absolute;
+    background: #fff;
+    padding:8px 0px;
+    box-shadow: 0 0 6px #33333352;
+    left: -80px;
+    top: 61px;
+    width: 133px;
+    transition: 0.1s;
+    /* height: 154px; */
+    /* transform: translate(-); */
+    transform-origin: top;
+    border-radius:3px;
+    z-index: 5;
+    /* transform: scale(1.2);   */
+}
+.classroom-details .classroom-content .right-side .content-values .card ul.card-settings.hidden {
+    height: 0px;
+    padding:0;
+    overflow: hidden;
+}
+.classroom-details .classroom-content .right-side .content-values .card ul.card-settings li {
+    margin:0;
+}
+.classroom-details .classroom-content .right-side .content-values .card ul.card-settings a{
+    padding:14px;
+    color: #333;
+    width: 100%;
+    display: inline-block;
+    transition: 0.3s;
+}
+.classroom-details .classroom-content .right-side .content-values .card ul.card-settings a.disble {
+    color: #999;
+    pointer-events: none;
+    user-select: none;
+}
+.classroom-details .classroom-content .left-side .content-values .card ul.card-settings a:hover {
+    background: #99999926;
+}
+/* classwork */
+.section-container {
+    width: 72%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.classwork-section {
+    display: flex;
+    margin-top: 25px;
+}
+.classwork-section .topics {
+    width: 250px;
+}
+.classwork-section .topics ul {
+    width: 180px;
+    margin-top: 35px;
+}
+.classwork-section .topics ul li{
+    margin:12px 0;
+}
+.classwork-section .topics ul li a {
+    color: gray;
+    width: 100%;
+    display: inline-block;
+    padding:17px;
+    border-radius:6px;
+    transition: 0.3s;
+    font-size: 17px;
+    /* font-weight: bold; */
+}
+.classwork-section .topics ul li a:hover{
+    background: var(--main-background-color);
+}
+.classwork-section .topics ul li a.active {
+    background: var(--main-background-color);
+    color: var(--main-color);
+}
+.classwork-section .rigth-side {
+    flex: 1;
+}
+.classwork-section .rigth-side .header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.classwork-section .rigth-side .header .create {
+    display: flex;
+    background: var(--main-color);
+    width: 120px;
+    height: 51px;
+    box-shadow: 0 0 12px var(--main-background-color);
+    border-radius:51px;
+    justify-content: center;
+    /* font-weight: bold; */
+    font-size: 18px;
+    transition: 0.3s;
+    position: relative;
+    z-index: 5;
+}
+.classwork-section .rigth-side .header .create:hover::before{
+    animation: animate 1s infinite linear;
+}
+.classwork-section .rigth-side .header .create:hover::after{
+    animation: animate 1s infinite linear;
+    animation-delay: 0.4s;
+}
+.classwork-section .rigth-side .header .create::before,
+.classwork-section .rigth-side .header .create::after{
+    content: '';
+    position: absolute;
+    border-radius:51px;
+    z-index: -1;
+    background-color: transparent;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%,-50%);
+    cursor: pointer;
+}
+
+@keyframes animate {
+    0%{
+        width: 98%;
+        height: 98%;
+        border: solid 3px var(--main-background-color);
+    }
+    30%{
+        width: 101%;
+        height: 101%;
+        border: solid 3px var(--main-background-color);
+    }
+    50%{
+        width: 103%;
+        height: 103%;
+        border: solid 3px var(--main-background-color);
+    }
+    70%{
+        width: 105%;
+        height: 105%;
+        border: solid 3px var(--main-background-color);
+    }
+    100%{
+        width: 107%;
+        height: 107%;
+        border: solid 3px var(--main-background-color);
+    }
+}
+.classwork-section .rigth-side .header .create ul {
+    position: absolute;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius:5px;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    box-shadow: -3px -1px 15px #3333333d;
+    top: 100px;
+    z-index: 5;
+    transition: 0.3s;
+    width: 230px;
+    right: -50px;
+}
+.classwork-section .rigth-side .header .create ul::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: 90px;
+    border: solid 20px;
+    border-bottom-color: #fff;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    /* box-shadow: 0 0 15px #3333331c; */
+}
+.classwork-section .rigth-side .header .create ul.hidden {
+    height: 0;
+    padding:0;
+    overflow: hidden;
+}
+.classwork-section .rigth-side .header .create ul hr {
+    opacity: 0.5;
+    margin:5px 0;
+}
+.classwork-section .rigth-side .header .create ul a {
+    color: #222;
+    fill: var(--main-color);
+    border-radius:0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.classwork-section .rigth-side .header .create ul a:hover {
+    background: #99999941;
+}
+.classwork-section .rigth-side .header .create ul span {
+    display: inline-block;
+    margin-right: 20px;
+}
+.classwork-section .rigth-side .header .create a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    fill: #fff;
+    cursor: pointer;
+}
+.classwork-section .rigth-side .header .create a svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+}
+.classwork-section .rigth-side .header .google-options {
+    display: flex;
+    font-size: 15px;
+    color: var(--main-color);
+    fill: var(--main-color);
+    margin-right: auto;
+}
+.classwork-section .rigth-side .header .google-options > div {
+    display: flex;
+    align-items: center;
+    padding:4px 15px;
+    border-radius:5px;
+    transition: 0.3s;
+    min-height: 50px;
+    column-gap: 5px;
+    cursor: pointer;
+    
+}
+.classwork-section .rigth-side .header .google-options > div:hover {
+    background: var(--main-background-color);
+}
+.classwork-section .rigth-side .not-found {
+    border-top: 2px solid #eee;
+    padding-top: 120px;
+}
+.classwork-section .rigth-side > ul {
+    margin-top: 20px;
+}
+.classwork-section .rigth-side > ul > li{
+    margin-bottom: 70px;
+    /* background-color: red; */
+}
+.classwork-section .rigth-side .not-found span {
+    display: inline-block;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+.classwork-section .rigth-side  .not-found span svg {
+    margin-right: auto;
+    width: 350px;
+}
+.classwork-section .rigth-side  .not-found span svg path.VnOHwf-Wvd9Cc {
+    fill: var(--main-color);
+}
+.classwork-section .rigth-side .not-found span {
+    width: 450px;
+    display: block;
+    line-height: 1.6;
+    text-align: center;
+    color:#666;
+}
+.classwork-section .rigth-side .not-found span span {
+    display: block;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.classwork-section .rigth-side ul li > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid var(--main-color);
+    padding:0 15px 18px;
+    fill: var(--main-color);
+    color: var(--main-color);
+    font-size: 24px;
+    position: relative;
+}
+.classwork-section .rigth-side ul li > div:nth-child(1) .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    transition: 0.1s;
+    order: 3;
+    cursor: pointer;
+}
+.classwork-section .rigth-side ul li > div:nth-child(1) .icon:hover {
+    background-color: var(--main-background-color);
+}
+
+.classwork-section .rigth-side ul li ul.content {
+    margin-top: 15px;
+}
+.classwork-section .rigth-side ul.content > li.active + .classwork-information.active {
+    padding:15px;
+    padding-top: 12px;
+    padding-bottom: 2px;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > span{
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 18px;
+    display: block;
+    margin-top: 6px;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .ins-container {
+    display: flex;
+    color: #555;
+    column-gap: 45px;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .ins-container .instruction {
+    line-height: 1.8;
+    margin-right: 10px;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .ins-container .numbers {
+    display: flex;
+    height: fit-content;
+    margin-right: auto;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .ins-container .numbers >div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:0 15px;
+    border-right: 1px solid #9999;
+    height: 100px;
+    font-size: 15px;
+    text-wrap:nowrap;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .ins-container .numbers >div span {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .button {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+    /* border-top: 1px solid var(--main-background-color); */
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information {
+    height: 0;
+    box-shadow: 0 9px 12px 0 #33333321;
+    box-shadow: 0 4px 12px 0 #33333317;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    /* padding-top: 0; */
+    /* padding-bottom: 0; */
+    padding:0px 15px;
+    overflow: hidden;
+    transition: 0.5s linear;
+}
+.classwork-section .rigth-side ul.content > li.active + .classwork-information.active {
+    height: auto;
+    /* display: none; */
+}
+
+
+.classwork-section .rigth-side ul.content > li + .classwork-information > .button::after {
+    content: '';
+    width: calc(100% + 30px);
+    height: 1px;
+    background-color: var(--main-background-color);
+    position: absolute;
+    top: 0;
+    right: -15px;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .button a {
+    color: var(--main-color);
+    padding:10px 12px;
+    border-radius:5px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.classwork-section .rigth-side ul.content > li + .classwork-information > .button a:hover {
+    background: var(--main-background-color);
+}
+.classwork-section .rigth-side ul.content > li {
+    display: flex;
+    justify-content: space-between;
+    padding:15px;
+    font-size: 18px;
+    align-items: center;
+    color: #666;
+    fill: #fff;
+    margin:0;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 2px solid var(--main-background-color);
+}
+.classwork-section .rigth-side ul.content > li:hover {
+    border-radius:5px;
+    border: none;
+    background-color: var(--main-background-color);
+}
+.classwork-section .rigth-side ul.content > li.active:hover{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.classwork-section .rigth-side ul.content > li.active {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: none;
+    background-color: var(--main-background-color);
+    box-shadow: 0 -16px 12px 0px #22222205;
+    box-shadow: 0 -5px 12px 0 #3333330f;
+}
+.classwork-section .rigth-side ul.content > li .icon {
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66666646;
+}
+.classwork-section .rigth-side ul.content > li .icon.active {
+    background-color: var(--main-color);
+}
+.classwork-section .rigth-side ul.content > li span {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.classwork-section .rigth-side ul.content > li .date {
+    display: flex;
+    align-items: center;
+    fill: #666;
+}
+.classwork-section .rigth-side ul.content > li .date span {
+    font-size: 14px;
+    display: inline-block;
+    color: #66666665;
+    margin-left: 15px;
+}
+.classwork-section .rigth-side ul.content > li .date div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    transition: 0.3s;
+    opacity: 0;
+    fill: #666;
+}
+.classwork-section .rigth-side ul.content > li:hover .date div,
+.classwork-section .rigth-side ul.content > li.active .date div{
+    opacity: 1;
+}
+.classwork-section .rigth-side ul.content > li .date div:hover {
+    background-color: #66666628;
+    fill: #222;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options ,
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options{
+    position: absolute;
+    background: #fff;
+    /* padding:5px; */
+    width: 170px;
+    padding:5px 0;
+    border-radius:5px;
+    box-shadow: 0 0 15px #3333333b;
+    top: 59px;
+    transition: 0.2s;
+    z-index: 5;
+    left: -91px;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options.hidden ,
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options.hidden {
+    height: 0;
+    overflow: hidden;
+    padding:0;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options > li ,
+classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options > li{
+    font-weight: normal;
+    padding:15px 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin:0;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options > li.disable,
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options > li.disable{
+    color: #9999;
+    pointer-events: none;
+    user-select: none;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options > li:hover,
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options > li:hover{
+    color: #444;
+    background: #80808021;
+}
+.classwork-section .rigth-side ul.content > li ul.material-options > hr,
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options > hr{
+    margin:6px 0;
+    opacity: 0.6;
+}
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options {
+    width: 155px;
+    top:50px;
+}
+
+.classwork-section .rigth-side ul li > div:nth-child(1) ul.topic-options > li {
+    cursor: pointer;
+    color: #444444e1;
+    margin:0;
+    padding:10px 12px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* classroom topics */
+.create-topic {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: 0.1s;
+}
+.create-topic.hidden {
+    height: 0;
+    overflow: hidden;
+    padding:0;
+}
+.create-topic .content {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%,-50%);
+    width: 295px;
+    background: #fff;
+    border-radius:5px;
+    padding:30px 25px 20px;
+}
+.create-topic .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* .classwork-section .rigth-side .header .google-options > div  */
+@media screen and (max-width: 650px) {
+    .container {
+        padding:0 10px;
+    }
+    .cards {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+    .card .img .title .avatar {
+        /* position: absolute;
+        top: 65px;
+        right: 125%; */
+        /* float: left; */
+        display: none;
+        /* align-self: flex-end; */
+    }
+    .card .img .title .option {
+        right: 145%;
+    }
+    aside .content {
+        width: 100%;
+        box-shadow: none;
+    }
+    aside {
+        top: 70px;
+    }
+}
+
+@media screen and (min-width: 651px) and (max-width: 992px) {
+    .container {
+        font-size: 16px;
+    }
+    .cards {
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+    .card .img .title .avatar {
+       display: none;
+    }
+    
+    
+    .card .img .title .option {
+        left: 0;
+    }
+    aside .content {
+        width: 36%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+    .container {
+        padding:0 30px;
+    }
+    .cards{
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+    }
+    aside .content {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .container {
+        padding:0 30px;
+    }
+}
+
+.aleart {
+    color: #fff;
+    background: #333;
+    min-width: 250px;
+    padding:15px 20px;
+    border-radius:5px;
+    font-size: 12px;
+    position: fixed;
+    top: 92vh;
+    right: 30px;
+    box-shadow: 1px 1px 8px -2px #333;
+    cursor: default;
+    text-transform: capitalize;
+}
+.form-control small {
+    color: red;
+}
+.classwork-section .people {
+    width: 100%;
+}
+.classwork-section .people > ul > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* font-weight: bold; */
+    font-size: 40px;
+    color: var(--main-color);
+    border-bottom: 2px solid;
+    padding:5px 15px 15px;
+}
+.classwork-section .people > ul > li > svg {
+    fill: var(--main-color);
+    font-size: 23px;
+    height: 32px;
+    width: 32px;
+    margin-bottom: -12px;
+    cursor: pointer;
+}
+.classwork-section .people > ul > li + ul li {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    color: #333;
+    font-size: 18px;
+    padding:8px 20px;
+    margin:15px 0;
+    column-gap: 20px;
+}
+.classwork-section .people > ul > li + ul {
+    margin-bottom: 50px;
+}
+.classwork-section .people > ul > li + ul li img {
+    width: 35px;
+    border-radius:50%;
+}
+.classwork-section .people > ul > li + ul .not-found-student {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 85px;
+}
+.classwork-section .people > ul > li + ul  .not-found-student svg {
+    width: 250px;
+}
+.classwork-section .people > ul > li + ul  .not-found-student svg path.VnOHwf-Wvd9Cc {
+    fill: var(--main-color);
+}
+.classwork-section .people > ul > li + ul  .not-found-student p {
+    text-align: center;
+    color: #555;
+    font-weight: 500;
+    margin:18px 0px;
+    font-size: 14px;
+}
+.classwork-section .people > ul > li + ul  .not-found-student span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: 500;
+    cursor: pointer;
+    /* margin-top: 25px; */
+    width: fit-content;
+    padding:12px 18px;
+    border-radius:5px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: 0.5s;
+}
+.classwork-section .people > ul > li + ul  .not-found-student span:hover {
+    background: var(--main-background-color);
+}
+.classwork-section .people > ul > li + ul  .not-found-student span svg{
+    fill:var(--main-color);
+    width: fit-content;
+    margin-left: 25px;
+}
+.create-classwork {
+    position: fixed;
+    top: 0%;
+    background: #fff;
+    right: 0%;
+    /* transform: translate(+50%,-50%); */
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    transition: 0.3s;
+    z-index: 100;
+    
+}
+.create-classwork.remove {
+    height: 0;
+    /* width: 0; */
+    overflow: hidden;
+}
+.create-classwork form {
+    padding-top: 5px;
+    /* padding-bottom: 25px; */
+}
+.create-classwork form nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create-classwork form nav .left {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-right: 25px;
+}
+.create-classwork form nav .left .colse {
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.create-classwork form nav .left .colse svg {
+    width: 20;
+    height: 20;
+}
+.create-classwork form nav .right .colse:hover {
+    background: #33333317;
+}
+.create-classwork form nav .left .icon {
+    width: 33px;
+    height: 33px;
+    background: var(--main-background-color);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px;
+}
+.create-classwork form nav .left .icon svg {
+    fill: var(--main-color);
+    width: 21px;
+    height: 21px;
+}
+.create-classwork form nav .left .header {
+    font-size: 20px;
+    color: #666;
+    margin-right: 5px;
+    padding:0;
+}
+
+.create-classwork form nav .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    
+}
+
+
+.create-classwork form nav .right .assign{
+    
+}
+.create-classwork form nav .right .assign button[type='button']{
+    background: #3333331f;
+    border: none;
+    padding:11px 25px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    pointer-events: none;
+    user-select: none;
+    margin-left: 1px;
+    height: 38px;
+}
+.create-classwork form nav .right .assign button[type='button'].active {
+    pointer-events: auto;
+    background: var(--main-color);
+    color: #fff;
+}
+.create-classwork form nav .right .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.create-classwork form nav .right .menu ul {
+    position: absolute;
+    top: 42px;
+    right: -90px;
+    background: #fff;
+    border-radius:3px;
+    box-shadow: 1px 1px 5px 1px #6666660a;
+    padding:6px 0;
+    height: 166px;
+    z-index: 5;
+    transition: 0.3s;
+    width: 125px;
+}
+.create-classwork form nav .right .menu ul.remove {
+    height: 0;
+    padding:0;
+    box-shadow: none;
+    overflow: hidden;
+}
+.create-classwork form nav .right .menu ul li {
+    padding:8px 15px;
+    color: #333333e3;
+    cursor: pointer;
+    margin:0;
+    transition: 0.3s;
+}
+.create-classwork form nav .left .menu ul li:hover {
+    background: #6666660d;
+}
+.create-classwork form nav .right .menu ul hr {
+    opacity: 0.4;
+    margin:6px 0;
+}
+.create-classwork form nav .right .menu .icon {
+    background: var(--main-color);
+    fill: #fff;
+    height: 38px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.create-classwork form nav .right .menu .icon svg {
+    fill: #fff;
+}
+.create-classwork form > .content {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+    min-height: calc(100vh - 64px);
+    padding-bottom: 25px;
+}
+.create-classwork form .content .left {
+    padding-right: 35px;
+    flex: 1;
+    background: #6666660f;
+}
+.create-classwork form .content .left .form-control {
+    position: relative;
+    /* margin-left: 35px; */
+    /* margin-top: 22px; */
+}
+.create-classwork form .content .left .form-control input {
+    height: 55px;
+    width: 100%;
+    border: none;
+    color: var(--main-color);
+    outline: none;
+    font-size: 16px;
+    padding-right: 18px;
+    border-bottom: 2px solid #66666657;
+    transition: 0.3s;
+    padding-top: 12px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background: #6666660e;
+}
+.create-classwork form .content .right .form-control input.active,
+.create-classwork form .content .right .form-control input:focus {
+    border-bottom: 2px solid;
+}
+.create-classwork form .content .left .form-control input + label {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 16px;
+    color: #666;
+    transition: 0.3s;
+}
+.create-classwork form .content .right .form-control input.active + label ,
+.create-classwork form .content .right .form-control input:focus + label {
+    top: 6px;
+    font-size: 12px;
+    color: var(--main-color);
+}
+.create-classwork form .content .left .text-editor {
+    margin-top: 15px;
+    position: relative;
+}
+.create-classwork form .content .left .text-editor #editorjs {
+    border-bottom: 2px solid #66666657;
+    background: #6666660e;
+    padding:25px 15px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    color: var(--main-color);
+    min-height: 210px;
+}
+.create-classwork form .content .left .text-editor #editorjs ul li {
+    list-style:disc;
+}
+.create-classwork form .content .left .text-editor #editorjs.active {
+    border-color: var(--main-color);
+}
+.create-classwork form .content .left .text-editor #editorjs svg[viewBox="0 0 24 24"] {
+    /* display: none; */
+} 
+.create-classwork form .content .left .text-editor .title {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    transition: 0.3s;
+    color: #666;
+}
+
+.create-classwork form .content .left .text-editor #editorjs.active + .title{
+    color: var(--main-color);
+    top: 12px;
+    font-size: 12px;
+}
+.create-classwork form .content .attach {
+    background: #fff;
+    border: 1px solid #66666633;
+    border-radius:5px;
+    padding:15px 20px;
+    margin-left: 30px;
+}
+.create-classwork form .content .attach .title {
+    text-align: right;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.create-classwork form .content .attach ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.create-classwork form .content .attach ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+}
+.create-classwork form .content .attach ul li .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    cursor: pointer;
+    border: 1px solid #99999924;
+    transition: 0.3s;
+}
+.create-classwork form .content .attach ul li .icon.create:hover{
+    box-shadow: 0px 0px 0px 6px #99999924;
+}
+.create-classwork form .content .attach ul li .title {
+    cursor: default;
+}
+.create-classwork form .content .attach ul li .icon:hover {
+    background: #99999924;
+    border-color: transparent;
+}
+.create-classwork form .content .attach ul li svg {
+    width: 28px;
+    height: 28px;
+}
+.create-classwork form .content .attach ul li svg.min-color {
+    fill: var(--main-color);
+}
+.create-classwork form .content .attach ul li .icon.create svg {
+    width: 35px;
+    height: 35px;
+}
+.create-classwork form .content .right {
+    width: 350px;
+}
+.create-classwork form .content .right .for h4,
+.create-classwork form .content .right .points h4,
+.create-classwork form .content .right .topics h4{
+    color: #666;
+    margin-top: 25px;
+}
+.create-classwork form .content .right .topics {
+    width: 100%;
+    padding-left: 20px;
+}
+.create-classwork form .content .right .topics .input select ,
+.create-classwork form .content .right .topics .input input {
+    height: 48px;
+    padding:12px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background: #f7f7f7;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius:4px;
+    width: 100%;
+    color:  rgb(102, 102, 102);;
+}
+.create-classwork form .content .right .points .input input{
+    height: 45px;
+    border: none;
+    background: #f7f7f7;
+    border-radius:3px;
+    margin-top: 10px;
+    width: 138.27px;
+    padding-top: 8px; padding-left: 8px; padding-bottom: 8px; padding-right: 15px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.2s;
+    outline: none;
+}
+.create-classwork form .content .right .points .input input + ul {
+    position: relative;
+}
+.create-classwork form .content .right .points .input input + ul.remove {
+    height: 0;
+    overflow: hidden;
+}
+.create-classwork form .content .right .points .input input + ul li {
+    font-size: 13px;
+    position: absolute;
+    text-align: center;
+    width: 118px;
+    margin-top: 5px;
+    padding:12px;
+    background: #fff;
+    border-radius:3px;
+    color: #666;
+    cursor: pointer;
+    box-shadow: 0 0 7px 1px #2222221f;
+    margin-right: 10px;
+}
+.create-classwork form .content .left .points .input input:focus {
+    border-bottom: solid var(--main-color) 2px;
+}
+.create-classwork form .content .right .for > .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:12px 0;
+    padding-left: 20px;
+}
+.create-classwork form .content .right .for >.content > div  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    background: #f7f7f7;
+    height: 50px;
+    border-radius:4px;
+    padding-top: 8px; padding-left: 8px; padding-bottom: 8px; padding-right: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #666;
+    fill: #666;
+    font-size: 14px;
+}
+.create-classwork form .content .right .for >.content > div .chose {
+    flex: 1;
+}
+.create-classwork form .content .right .for > .content> div ul {
+    position: absolute;
+    top: 57px;
+    background: #fff;
+    box-shadow: 0 0 12px 2px #2222221c;
+    padding:8px 0 3px;
+    right: -55px;
+    border-radius:3px;
+    width: 200px;
+}
+.create-classwork form .content .right .for > .content> div ul.remove {
+    width: 0;
+    padding:0;
+    overflow: hidden;
+}
+.create-classwork form .content .right .for > .content> div ul > li  {
+    display: flex;
+    padding:10px 15px;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+}
+.create-classwork form .content .right .for > .content> div ul > li.active {
+    background-color: var(--main-background-color);
+}
+.create-classwork form .content .left .for > .content> div ul > li.active:hover {
+    background-color: var(--main-background-color);
+}
+.create-classwork form .content .left .for > .content> div ul > li:hover {
+    background-color: #9999992c;
+}
+.create-classwork form .content .right .for > .content> div ul > li .icon {
+    cursor: pointer;
+}
+.create-classwork form .content .right .for > .content> div ul > li .icon i {
+    background: var(--main-color);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    border-radius:50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 8px;
+}
+.create-classwork form .content .right .for > .content> div ul > li input[type='checkbox'] {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+}
+.create-classwork .topics {
+    width: 45%;
+    
+}
+.create-classwork .topics select {
+    width: 100%;
+    height: 85px;
+    color: #666;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #6666663f;
+    border-radius:3px;
+}
+.create-classwork .topics select option[select] {
+    color: red;
+}
+section.join ::selection {
+    background-color: rgba(0, 0, 255, 0.815);
+    color: #fff;
+}
+section.join {
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 29px;
+    border-radius:8px;
+    overflow: hidden;
+    border: 1px solid #9999994a;
+    padding-bottom: 25px;
+}
+section.join .header {
+    text-align: center;
+    background: #eeeeeea3;
+    padding-top: 40px;
+}
+section.join .header .img {
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+}
+section.join .header .img img {
+    width: 100%;
+}
+section.join .header .title {
+    font-size: 25px;
+    color: #66666691;
+    margin:15px 0;
+}
+section.join .header .title span {
+    color: #666;
+    font-weight: 500;
+}
+section.join .header .info p {
+    color: #999;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+section.join .body {
+    padding-top: 20px;
+}
+section.join .body .user {
+    margin-right: auto;
+    margin-left: auto;
+    width: 225px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 15px;
+    border: 1px solid #6666665e;
+    border-radius:3px;
+    cursor: default;
+    text-overflow: ellipsis;
+}
+section.join .body .user .img {
+    /* width: 40px; */
+    width: 40px;
+}
+section.join .body .user .img img {
+    width: 100%;
+    border-radius:50%;
+}
+section.join .body .user .info {
+    width: 70%;
+}
+section.join .body .user .info .name {
+    color: #333;
+    font-weight: 500;
+    text-wrap:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+section.join .body .user .info .email {
+    color: #999;
+    text-wrap:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+section.join .body .user + p {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 25px;
+}
+section.join button[type='submit'] {
+    border: none;
+    background: #0000ffc4;
+    color: #fff;
+    width: 107px;
+    height: 39px;
+    border-radius:3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+section.join button[type='submit']:hover {
+    background-color: blue;
+}
+section.join .footer {
+    color: #999;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+section.join a {
+    color: #2196F3;
+}
+.show-classwork {
+    display: flex;
+    column-gap: 35px;
+    /* margin-top: 10px; */
+}
+.show-classwork .left {
+    flex: 1;
+}
+.show-classwork .left >.header {
+    /* border-bottom: 1px solid var(--main-color); */
+    position: relative;
+}
+.show-classwork .left .header .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.show-classwork .left .header .head > div .icon {
+    width: 38px;
+    height: 38px;
+    fill: #fff;
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+}
+.show-classwork .left .header .head > div .title {
+    font-size: 32px;
+    color: var(--main-color);
+    margin-right: 20px;
+
+}
+.show-classwork .left .header .head > .options {
+    position: relative;
+}
+.show-classwork .left .header .head > .options > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+    width: 45px;
+    height: 45px;
+    fill: var(--main-color);
+    cursor: pointer;
+    margin-right: auto;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.show-classwork .right .header .head > .options > .icon:hover {
+    background: var(--main-background-color);
+}
+.show-classwork .left .header .head > .options > ul {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 11px -3px #2226;
+    width: 150px;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    top: 43px;
+    right: -8px;
+}
+.show-classwork .left .header .head > .options > ul.remove {
+    width: 0px;
+    overflow: hidden;
+}
+.show-classwork .left .header .head > .options > ul li {
+    color: #333;
+    background: #99999947;
+    width: 100%;
+    padding:8px 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.show-classwork .left .header .created-by {
+    display: flex;
+    color: #666666e1;
+    font-size: 14px;
+    /* font-weight: 500; */
+    margin-right: 58px;
+    margin-top: 5px;
+}
+.show-classwork .left .header .created-by sup {
+    margin-right: 6px;
+    margin-left: 6px;
+    position: relative;
+    top: -8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.show-classwork .left .header .created-by .date {
+    margin-left: 4px;
+}
+.show-classwork .left .header .points {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-right: 58px;
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+}
+.show-classwork .right >.header::after {
+    content: '';
+    position: absolute;
+    top: 96%;
+    right: 58px;
+    width: calc(100% - 58px);
+    height: 1px;
+    background-color: var(--main-color);
+}
+.show-classwork .left .class-comment {
+    margin-right: 58px;
+    padding-top: 12px;
+    margin-top: 25px;
+    position: relative;
+}
+.show-classwork .left .class-comment .header {
+    display: flex;
+    align-items: center;
+    color: #666;
+    fill: #666;
+    column-gap: 12px;
+    cursor: default;
+    /* font-weight: 400; */
+    padding:0;
+}
+.show-classwork .left .class-comment .header h4 {
+    font-weight: 500;
+    margin:0;
+}
+.show-classwork .left .class-comment .button {
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.show-classwork .left .body {
+    margin-right: 58px;
+    margin-top: 15px;
+    color: #333;
+}
+.show-classwork .right .class-comment::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #66666644;
+}
+.show-classwork .right {
+    width: 310px;
+    margin-top: 30px;
+}
+.show-classwork .right .private-comment{
+    background: #fff;
+    /* box-shadow: 0 0 12px 1px #22222259; */
+    box-shadow: 0 0 12px 1px #22222215;
+    padding-top: 18px; padding-left: 0px; padding-bottom: 18px; padding-right: 28px;
+    border-radius:5px;
+    margin-top: 35px;
+}
+.show-classwork .right .private-comment > div {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #666;
+    fill: #666;
+    font-weight: 500;
+    font-size: 15px;
+}
+.show-classwork .right .private-comment > span {
+    display: block;
+    margin-top: 10px;
+    color: var(--main-color);
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.show-classwork .right .work {
+    background: #fff;
+    box-shadow: 0 0 12px 1px #22222259;
+        box-shadow: 0 0 12px 1px #22222215;
+    padding:18px 28px;
+    border-radius:5px;
+}
+.show-classwork .right .work .your-work {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+}
+.show-classwork .right .work .your-work h3 {
+    display: flex;
+    font-weight: 400;
+    font-size: 21px;
+}
+.show-classwork .right .work .your-work span {
+    font-size: 13px;
+    font-weight: 500;
+}
+.show-classwork .right .work button {
+    display: block;
+    width: 100%;
+    padding:10px;
+    border-radius:5px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    background: transparent;
+}
+.show-classwork .left .work button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.ce-block__content {
+    max-width: 100% !important;
+}
+.codex-editor__redactor {
+    padding-bottom: 0 !important;
+}
+
+section .join-class-content {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(+50%,-50%);
+    background: #fff;
+    padding:15px;
+    border-radius:5px;
+    color: #333;
+    height: 500px;
+    width: 400px;   
+}
+section .join-class-content > h3 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+section .join-class-content .link >h4 + div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:8px 0;
+}
+section .join-class-content .link >h4 + div p {
+    font-size: 13px;
+    text-wrap: nowrap;
+    width: 85%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: gray;
+    
+}
+section .join-class-content .link >h4 + div .copy {
+    margin-left: 8px;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--main-color);
+    border-radius:50%;
+    transition: 0.3s;
+}
+section .join-class-content .link >h4 + div .copy:hover {
+    background: var(--main-background-color);
+}
+section .join-class-content .link >h4 + div .copy .svg {
+    width: 20px;
+    height: 20px;
+}
+section .join-class-content .join-by-email input {
+    outline: none;
+    /* border: none; */
+    width: 100%;
+    height: 38px;
+    font-size: 14px;
+    padding:8px;
+    color: var(--main-color);
+    border-radius:3px;
+    border: 1px solid #999;
+}
+
+section .join-class-content .join-by-email input:focus {
+    border: 1px solid var(--main-color);
+}
+section.join-for-classroom{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: 0.2s ease;
+}
+section.join-for-classroom.remove {
+    top: -100%;
+    /* overflow: hidden; */
+}
+section .join-class-content .join-by-email input::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+}
+section .join-class-content .join-by-email input:focus::placeholder {
+    color: var(--main-color);
+}
+section .join-class-content .footer {
+    position: absolute;
+    bottom: 20px;
+}
+section .join-class-content .heant {
+    color: #999;
+    font-size: 13px;
+    /* text-align: center; */
+    line-height: 1.6;
+    margin-bottom: 12px;
+    border-top: 1px solid #9999;
+    padding-top: 18px;
+    margin-left: 20px;
+}
+section .join-class-content .buttons {
+    text-align: left;
+    margin-left: 20px;
+}
+section .join-class-content .buttons button {
+    color: #444;
+    border: none;
+    padding:8px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+    transition: 0.3s;
+    border-radius:3px;
+}   
+section .join-class-content .buttons button[type='submit'] {
+    pointer-events: none;
+    color: #9999;
+    margin-right: 5px;
+}
+section .join-class-content .buttons button[type='submit'].active {
+    color: var(--main-color);
+    pointer-events: auto;
+}
+section .join-class-content .buttons button[type='button']:hover {
+    background-color: #99999925;
+}
+section .join-class-content .buttons button[type='submit']:hover {
+    background-color: var(--main-background-color);
+}
+span.notification {
+    position: relative;
+    margin:0 -8px;
+}
+span.notification i {
+    color: #666;
+    font-size: 20px;
+}
+span.notification::after {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius:50%;
+    background-color: #2196F3;
+    top: 14px;
+    left: 14px;
+}
+section.setting {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    border: 1px solid #999;
+    padding:55px 40px;
+    border-radius:6px;
+    max-width: 750px;
+
+}
+
+section.setting .profile h3 {
+    font-size: 45px;
+    text-align: center;
+    margin:8px;
+    color: #333;
+}
+
+section.setting .notification h3 {
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+section.setting .notification ul {
+    margin-top: 15px;
+    color: #666
+}
+
+section.setting .notification ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0
+}
+
+section.setting .notification ul li ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    width: 25%;
+}
+
+section.setting .notification ul li ul li label {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+section.setting .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.setting .avatar img {
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+section.setting .avatar label {
+    color: #fff;
+    background: #0000ff6b;
+    border: none;
+    padding:8px 12px;
+    border-radius:4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section.setting .avatar label:hover {
+    background-color: #0000ffb7;
+}
+
+section.setting div#show-avatar.hidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+section.setting div#show-avatar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+section.setting div#show-avatar img {
+    z-index: 5;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+form.logout {
+    display: flex;
+    justify-content: space-between;
+    width: 46%;
+}
+form.logout i {
+    font-size: 18px;
+    margin-right: 8px;
+    transform: rotateY(180deg);
+}
+form.logout span {
+    cursor: pointer;
+    margin-left: -10px;
+}
